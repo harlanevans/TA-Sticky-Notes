@@ -1,0 +1,12 @@
+<%= link_to 'Go Back to All Notes', notes_path %>
+<h4 class='header'>
+  -<%= @note.author %>
+</h4>
+<div class='card-container'>
+<div class='card'>
+<h1 class='header'>
+  <%= @note.title %>
+</h1>
+<p class='body'>'<%= @note.body %>'</p>
+</div>
+</div>

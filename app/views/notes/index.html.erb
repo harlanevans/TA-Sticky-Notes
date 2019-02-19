@@ -1,0 +1,24 @@
+<h1 class='header'>Notes</h1>
+<div class='body'>
+<%= link_to 'Create New Note', new_note_path %>
+<hr/>
+</div>
+  <% @notes.each do |note| %>
+<div class='card-container'>
+<div class='card'>
+    <ul class='body'>
+    <h3>
+    <p>'<%= note.title %>'</p>
+    </h3>
+    <p>-
+     <%= note.author %>
+    </p>
+    <%= link_to 'Go to Note', note_path(note) %>
+    <br/>
+   <%= link_to 'Delete This Note', note, method: :delete %>
+    <br/>
+    <%= link_to 'Edit This Note', edit_note_path(note)  %>
+    </ul>
+</div>
+</div>
+  <% end %>

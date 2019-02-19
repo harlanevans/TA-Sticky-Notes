@@ -1,0 +1,27 @@
+<h1 class='header'>Edit
+'<%= @note.title %>'
+</h1>
+<div class='body'>
+<div class='form'>
+<%= form_for @note do |n| %>
+
+<%= n.label :title %>
+<%= n.text_field :title %>
+<br/>
+<br/>
+<br/>
+<%= n.label :author %>
+<%= n.text_field :author %>
+
+<br/>
+<br/>
+<br/>
+<%= n.label :body %>
+<%= n.text_area :body %>
+<br/>
+<br/>
+<br/>
+<%= n.submit %>
+</div>
+</div>
+<% end%>
